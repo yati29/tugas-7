@@ -1,0 +1,92 @@
+#include <stdio.h>
+#include <iostream>
+
+class unggas{
+protected:
+	std::string warnabulu;
+	int jml_kaki;
+public:
+	unggas(std::string warnabulu,int jml_kaki)
+	{
+		this->warnabulu=warnabulu;
+		this->jml_kaki=jml_kaki;
+	}
+	void setwarnabulu(std::string warnabulu)
+	{
+		this->warnabulu=warnabulu;
+	}
+	std::string getwarnabulu()
+	{
+		return this->warnabulu;
+	}
+	void setjumlahkaki(int jml_kaki)
+	{
+		this->jml_kaki=jml_kaki;
+	}
+	int getjumlahkaki()
+	{
+		return this->jml_kaki;
+	}
+	void suara(std::string suara)
+	{
+		std:: cout<< suara;
+	}
+	void terbang(std::string terbang)
+	{
+		std:: cout<< terbang;
+	}
+	
+};
+class Ayam: public unggas{
+	Ayam(std::string warnabulu,int k):wanabulu(2),jml_kaki(2)
+	{
+		
+	}
+};
+class Itik: public unggas{
+	Itik(std::string warnabulu,int k):wanabulu(2),jml_kaki(2)
+	{
+		
+	}
+};
+class Burung: public unggas{
+	Burung(std::string warnabulu,int k):wanabulu(2),jml_kaki(2)
+	{
+		
+	}
+};
+
+int main(int argc, char **argv)
+{
+	Ayam ayam("merah",2);
+	//ayam.setwarnabulu("merah");
+	//ayam.setjumlahkaki(2);
+	std::cout <<"Warna bulu ayam : "<< ayam.getwarnabulu();
+	std::cout <<"\nJumlah kaki ayam : "<< ayam.getjumlahkaki();
+	std::cout <<"\nSuara ayam : ";
+	ayam.suara("kukuruyuk");
+	std::cout <<"\nApakah ayam bisa terbang?  ";
+	ayam.terbang("tidak\n");
+	std::cout<<"\n";
+	Itik itik("hijau",2);
+	//itik.setwarnabulu("hijau");
+	//itik.setjumlahkaki(2);
+	std::cout <<"Warna bulu itik : "<< itik.getwarnabulu();
+	std::cout <<"\nJumlah kaki itik : "<< itik.getjumlahkaki();
+	std::cout <<"\nSuara itik : ";
+	itik.suara("piekpiek");
+	std::cout <<"\nApakah itik bisa terbang?  ";
+	itik.terbang("tidak\n");
+	std::cout<<"\n";
+	Burung burung("putih",2);
+	//burung.setwarnabulu("putih");
+	//burung.setjumlahkaki(2);
+	std::cout <<"Warna bulu burung : "<< burung.getwarnabulu();
+	std::cout <<"\nJumlah kaki burung : "<< burung.getjumlahkaki();
+	std::cout <<"\nSuara burung : ";
+	burung.suara("coercoer");
+	std::cout <<"\nApakah burung bisa terbang?  ";
+	burung.terbang("ya\n");
+	
+	return 0;
+}
